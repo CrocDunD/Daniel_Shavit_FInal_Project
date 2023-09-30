@@ -27,9 +27,19 @@ class Verifications:
 
     @staticmethod
     @allure.step('Verify displayed elements using smart assertion')
-    def soft_assert(elems):
+    def soft_assert_is_displayed(elems):
         for i in range(len(elems)):
             soft_assert(elems[i].is_displayed)
+        verify_expectations()
+
+    @staticmethod
+    @allure.step('Verify that a list is going in a rising pattern')
+    def soft_assert_fisrt_smaller_than_second(elems):
+        first = elems[0]
+        for elem in elems:
+            second = elem
+            soft_assert(first <= second)
+            first = elem
         verify_expectations()
 
     @staticmethod

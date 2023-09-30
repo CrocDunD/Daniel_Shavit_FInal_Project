@@ -34,7 +34,8 @@ class Test_Web_Adidas:
         flow.close_cookies_pop_up()
         flow.open_original_shoes()
         flow.sort_low_to_high()
-        time.sleep(10)
+        time.sleep(3)
+        flow.verify_low_to_high_prices()
 
 
 

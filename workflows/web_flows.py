@@ -58,3 +58,11 @@ class Web_Flows:
     def sort_low_to_high():
         Ui_Actions.click(page.web_common_items_page.get_sort_btn())
         Ui_Actions.click(page.web_common_items_page.get_low_to_high_btn())
+
+    @staticmethod
+    @allure.step('Verify low to high prices')
+    def verify_low_to_high_prices():
+        prices = page.web_common_items_page.get_all_item_prices()
+        ver.soft_assert_fisrt_smaller_than_second(prices)
+
+
