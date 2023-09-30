@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Enviroment>
+    <!--General-->
+    <WaitTime>5</WaitTime>
+    <ScreenshotPath>C:/Users/daniels/PycharmProjects/final_project/allure-screen-shots/</ScreenshotPath>
+
+    <!--Web & API-->
+    <Browser>chrome</Browser>
+    <Url>https://www.adidas.co.il/en</Url>
+    <UserName>admin</UserName>
+    <Password>admin1</Password>
+    <Sub_Category_Count_CSV>C:/Users/daniels/PycharmProjects/Final_Automation Project_Daniel_Shavit/ddt/sub_category_count.csv</Sub_Category_Count_CSV>
+
+    <!--mobile-->
+    <MobileDevice>Android</MobileDevice>
+    <UDID>1C091FDF6002YB</UDID>
+    <AppPackage>tapcounter.svimph.com.tapcounter</AppPackage>
+    <AppActivity>.MainActivity</AppActivity>
+    <AppiumServer>http://localhost:4723/wd/hub</AppiumServer>
+    <BundleID></BundleID>
+</Enviroment>

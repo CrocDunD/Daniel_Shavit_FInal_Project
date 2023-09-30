@@ -1,0 +1,133 @@
+1695555623167	geckodriver	INFO	Listening on 127.0.0.1:52244
+1695555626219	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\daniels\\AppData\\Local\\Temp\\rust_mozprofileyf75Dh"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695555627118	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695555629351	Marionette	INFO	Listening on port 52254
+Read port: 52254
+1695555629492	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: unreachable code after return statement
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://zn6mcrij6xncfajof-adidastrial.siteintercept.qualtrics.com/WRSiteInterceptEngine/?Q_ZID=ZN_6McRij6XnCfajoF&Q_LOC=https%3A%2F%2Fwww.adidas.co.il%2Fen, line 3: Error: Loading chunk 12 failed.
+(error: https://siteintercept.qualtrics.com/dxjsmodule/12.f0510cc63da0d227c0b7.chunk.js?Q_CLIENTVERSION=1.99.0&Q_CLIENTTYPE=web&Q_BRANDID=www.adidas.co.il)
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1695555637756	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: unreachable code after return statement
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://www.adidas.co.il/on/demandware.static/Sites-adidas-IL-Site/-/en_IL/v1695527988495/js/main.js, line 31: TypeError: n[e].slick is undefined
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+g@https://sc-static.net/scevent.min.js:2:2519
+a@https://sc-static.net/scevent.min.js:2:6221
+
+1695555644246	Marionette	INFO	Stopped listening on port 52254
+JavaScript warning: https://cdn.cquotient.com/js/v2/gretel.min.js, line 1: Script terminated by timeout at:
+l@https://cdn.cquotient.com/js/v2/gretel.min.js:1:61175
+
+Dynamically enable window occlusion 1
+1695555658239	geckodriver	INFO	Listening on 127.0.0.1:56826
+1695555661304	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\daniels\\AppData\\Local\\Temp\\rust_mozprofile0bNeFZ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695555661888	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695555662333	Marionette	INFO	Listening on port 56836
+Read port: 56836
+1695555662574	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: unreachable code after return statement
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://zn6mcrij6xncfajof-adidastrial.siteintercept.qualtrics.com/WRSiteInterceptEngine/?Q_ZID=ZN_6McRij6XnCfajoF&Q_LOC=https%3A%2F%2Fwww.adidas.co.il%2Fen, line 3: Error: Loading chunk 12 failed.
+(error: https://siteintercept.qualtrics.com/dxjsmodule/12.f0510cc63da0d227c0b7.chunk.js?Q_CLIENTVERSION=1.99.0&Q_CLIENTTYPE=web&Q_BRANDID=www.adidas.co.il)
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+g@https://sc-static.net/scevent.min.js:2:2519
+a@https://sc-static.net/scevent.min.js:2:6221
+
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: unreachable code after return statement
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://www.adidas.co.il/on/demandware.static/Sites-adidas-IL-Site/-/en_IL/v1695527988495/js/main.js, line 31: TypeError: n[e].slick is undefined
+1695555676227	Marionette	INFO	Stopped listening on port 56836
+JavaScript warning: https://cdn.cquotient.com/js/v2/gretel.min.js, line 1: Script terminated by timeout at:
+l@https://cdn.cquotient.com/js/v2/gretel.min.js:1:61175
+
+Dynamically enable window occlusion 1
+1695564607899	geckodriver	INFO	Listening on 127.0.0.1:53572
+1695564610951	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\daniels\\AppData\\Local\\Temp\\rust_mozprofilekYB0zw"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695564611542	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695564612006	Marionette	INFO	Listening on port 53584
+Read port: 53584
+1695564612234	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: unreachable code after return statement
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1695564617166	Marionette	INFO	Stopped listening on port 53584
+JavaScript warning: https://cdn.cquotient.com/js/v2/gretel.min.js, line 1: Script terminated by timeout at:
+D@https://cdn.cquotient.com/js/v2/gretel.min.js:1:50429
+l@https://cdn.cquotient.com/js/v2/gretel.min.js:1:61199
+
+Dynamically enable window occlusion 1
+1695564636442	geckodriver	INFO	Listening on 127.0.0.1:53704
+1695564639487	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\daniels\\AppData\\Local\\Temp\\rust_mozprofilexyRhCK"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695564640130	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695564640605	Marionette	INFO	Listening on port 53716
+Read port: 53716
+1695564640659	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: unreachable code after return statement
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1695564652171	Marionette	INFO	Stopped listening on port 53716
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: Script terminated by timeout at:
+b3c@https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB:1:128294
+q6c@https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB:1:59251
+
+Dynamically enable window occlusion 1
+1695564681037	geckodriver	INFO	Listening on 127.0.0.1:53892
+1695564684080	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\daniels\\AppData\\Local\\Temp\\rust_mozprofileIhL3nC"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695564684659	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695564685172	Marionette	INFO	Listening on port 53904
+Read port: 53904
+1695564685457	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: unreachable code after return statement
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.adidas.co.il/Dg2M/GSNl/nr/dDks/e-1g/uwh9VtO7NuDu/NkFUfA/PBI/iMzlWGwsB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
