@@ -39,3 +39,7 @@ class Ui_Actions:
     @allure.step('Clear text')
     def clear(elem: WebElement):
         elem.clear()
+
+    @staticmethod
+    def multiple_clicks(list):
+        ActionChains(conftest.driver).click(list[0]).click(list[1]).perform()

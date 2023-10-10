@@ -4,7 +4,8 @@ import allure
 import pytest
 from selenium.webdriver.common.by import By
 
-from utilities.common_ops import wait, For, read_csv, get_data
+from extensions.verifications import Verifications as ver
+from utilities.common_ops import wait, For, read_csv, get_data, csv_to_dictionary
 from workflows.web_flows import Web_Flows as flow
 
 
@@ -34,15 +35,28 @@ class Test_Web_Adidas:
         flow.close_cookies_pop_up()
         flow.open_original_shoes()
         flow.sort_low_to_high()
-        time.sleep(3)
         flow.verify_low_to_high_prices()
 
+    @allure.title('Test filter items')
+    @allure.description('Filter items by specifications and verify that the number of items is correct')
+    def test_filter_by_specs(self):
+        flow.close_cookies_pop_up()
+        flow.open_original_shoes()
+        flow.open_filter_menu()
+        rows = csv_to_dictionary(get_data('Filter_Specs_CSV'))
+        for row in rows:
+            flow.filter_items_by_specs(row, rows[row])
+        result_in_apply_button = flow.get_filter_total()
+        flow.press_apply_filter_btn()
+        all_items_count = flow.count_all_items_in_category()
+        ver.verify_equals(result_in_apply_button, all_items_count)
 
-
-    #verify that all the strips on the main page are there
+    @allure.title('Test number of strips on main page')
+    @allure.description('Verify that all the strips on the main page are there')
+    def test_main_page_strips_exist(self):
+        flow.close_cookies_pop_up()
+        strip_titles = get_data('Main_Page_Strips')
+        strip_titles = strip_titles.split(',')
+        flow.verify_strips(strip_titles)
 
     #search for a specific item using ddt
-
-    #sort by price low to high and make sure prices are arranged in that order
-
-    #filter a list of items and verify that the number in the search button is equal to the count of items seen

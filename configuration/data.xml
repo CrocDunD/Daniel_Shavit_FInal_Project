@@ -10,6 +10,8 @@
     <UserName>admin</UserName>
     <Password>admin1</Password>
     <Sub_Category_Count_CSV>C:/Users/daniels/PycharmProjects/Final_Automation Project_Daniel_Shavit/ddt/sub_category_count.csv</Sub_Category_Count_CSV>
+    <Filter_Specs_CSV>C:/Users/daniels/PycharmProjects/Final_Automation Project_Daniel_Shavit/ddt/filter_specs.csv</Filter_Specs_CSV>
+    <Main_Page_Strips>Who are you shopping for?,BEST OF ADIDAS ORIGINALS,NEW IN RUNNING,WHAT'S HOT</Main_Page_Strips>
 
     <!--mobile-->
     <MobileDevice>Android</MobileDevice>

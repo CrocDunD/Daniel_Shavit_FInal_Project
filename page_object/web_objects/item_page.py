@@ -21,3 +21,4 @@ class Item_Page:
 
     def get_add_to_cart_btn(self):
         return self.driver.find_element(add_to_cart_btn[0],add_to_cart_btn[1])
+

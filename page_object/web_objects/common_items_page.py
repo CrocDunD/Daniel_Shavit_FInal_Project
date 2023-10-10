@@ -1,10 +1,15 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
 
 first_item = (By.XPATH,'//*[@class="row product-wrapsection"]/div[1]')
 all_items = (By.XPATH,'//*[@class="row product-wrapsection"]/div')
 all_items_prices = (By.XPATH,'//*[@class="row product-wrapsection"]/div//div[@class="price"]/span')
 sort_btn = (By.XPATH,'(//*[@aria-label="Sort by"])[1]')
 low_to_high_btn = (By.XPATH,'(//*[@data-id="price-low-to-high"])[1]')
+filter_button = (By.XPATH,'(//*[@class="btn filter-results col-12 m-0"])[1]')
+page_drop = (By.XPATH,'//select[@class="form-control custom-select plp-pagecount-select"][1]')
+last_page = (By.XPATH,'//*[@class="pageofNumber"]')
+
 
 
 class Common_Items_Page:
@@ -31,3 +36,14 @@ class Common_Items_Page:
 
     def get_low_to_high_btn(self):
         return self.driver.find_element(low_to_high_btn[0],low_to_high_btn[1])
+
+    def get_filter_button(self):
+        return self.driver.find_element(filter_button[0],filter_button[1])
+
+    def get_page_drop(self):
+        return Select(self.driver.find_element(page_drop[0],page_drop[1]))
+
+    def get_last_page_number(self):
+        return self.driver.find_element(last_page[0],last_page[1])
+
+
