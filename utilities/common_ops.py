@@ -1,6 +1,7 @@
 import csv
 import time
 
+from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from test_cases import conftest
@@ -29,16 +30,23 @@ def csv_to_dictionary(file_name):
 
 
 def wait(for_element, elem):
+    wait_time = 5
     if for_element == 'element exists':
-        WebDriverWait(conftest.driver, 5).until(EC.presence_of_element_located((elem[0], elem[1])))
+        WebDriverWait(conftest.driver, wait_time).until(EC.presence_of_element_located((elem[0], elem[1])))
     elif for_element == 'element displayed':
-        WebDriverWait(conftest.driver, 5).until(EC.visibility_of_element_located((elem[0], elem[1])))
+        WebDriverWait(conftest.driver, wait_time).until(EC.visibility_of_element_located((elem[0], elem[1])))
     elif for_element == 'element to be clickable':
-        WebDriverWait(conftest.driver, 5).until(EC.element_to_be_clickable((elem[0], elem[1])))
+        WebDriverWait(conftest.driver, wait_time).until(EC.element_to_be_clickable((elem[0], elem[1])))
     elif for_element == 'presence of element':
-        WebDriverWait(conftest.driver, 5).until(EC.presence_of_element_located((elem[0], elem[1])))
+        WebDriverWait(conftest.driver, wait_time).until(EC.presence_of_element_located((elem[0], elem[1])))
     elif for_element == 'element invisible':
-        WebDriverWait(conftest.driver, 5).until(EC.invisibility_of_element_located((elem[0], elem[1])))
+        WebDriverWait(conftest.driver, wait_time).until(EC.invisibility_of_element_located((elem[0], elem[1])))
+    elif for_element == 'visibility of all elements':
+        WebDriverWait(conftest.driver, 60, poll_frequency=1, ignored_exceptions=[StaleElementReferenceException]).until(EC.visibility_of_all_elements_located((elem[0], elem[1])))
+    elif for_element == 'staleness of element':
+        WebDriverWait(conftest.driver, wait_time).until(EC.staleness_of((elem[0], elem[1])))
+    elif for_element == 'text to be present':
+        WebDriverWait(conftest.driver, wait_time).until(EC.text_to_be_present_in_element((elem[0], elem[1])))
 
 
 #Enum for selecting displayed elements or existing elelemnts
@@ -48,6 +56,9 @@ class For:
     ELEMENT_TO_BE_CLICKABLE = 'element to be clickable'
     PRESENCE_OF_ELEMENT = 'presence of element'
     ELEMENT_INVISIBLE = 'element invisible'
+    ALL_ELEMENTS_VISIBLE = 'visibility of all elements'
+    STALENESS_OF = 'staleness of element'
+    TEXT_TO_BE_PRESENT = 'text to be present'
 
 
 class By:

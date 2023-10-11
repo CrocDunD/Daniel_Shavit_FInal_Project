@@ -3,7 +3,7 @@ import time
 import allure
 from selenium.webdriver.common.by import By
 
-from page_object.web_objects.common_items_page import last_page, all_items
+from page_object.web_objects.common_items_page import last_page, all_items, loader_anim
 from page_object.web_objects.front_page import X_btn_first_popup
 from page_object.web_objects.navbar_page import men_category_drop
 from page_object.web_objects.item_page import add_to_cart_btn
@@ -94,13 +94,13 @@ class Web_Flows:
         wanted_options = 0
         counter = 0
         while wanted_options != len(choices_to_filter):
+
             all_choices = page.web_filter_page.get_all_filter_options(filter_num)
-            #wait(For.ELEMENT_DISPLAYED, (By.XPATH, '//*[@class="refinements desktop"]/div[' + str(filter_num) + ']/div//li[' + str(counter + 1) + ']'))
             elem = all_choices[counter]
             choice_text = elem.find_element(By.XPATH,'a/span').text.lower().strip()
             if choice_text in choices_to_filter:
                 Ui_Actions.click(elem)
-                time.sleep(3)
+                wait(For.ELEMENT_INVISIBLE, loader_anim)
                 wanted_options += 1
             counter += 1
 
@@ -120,12 +120,12 @@ class Web_Flows:
     @staticmethod
     @allure.step('Count all items in category')
     def count_all_items_in_category():
-        wait(For.ELEMENT_INVISIBLE, last_page)
+        wait(For.ELEMENT_INVISIBLE, loader_anim)
         last_page_number = int(page.web_common_items_page.get_last_page_number().text[3:])
         page_drop = page.web_common_items_page.get_page_drop()
         page_drop.select_by_index(last_page_number-1)
         items_in_all_pages_but_last = 24*(last_page_number-1)
-        wait(For.ELEMENT_INVISIBLE, (all_items[0],all_items[1] + '[1]'))
+        wait(For.ELEMENT_INVISIBLE, loader_anim)
         items_in_last_page = len(page.web_common_items_page.get_all_items())
         return items_in_all_pages_but_last + items_in_last_page
 

@@ -9,6 +9,7 @@ low_to_high_btn = (By.XPATH,'(//*[@data-id="price-low-to-high"])[1]')
 filter_button = (By.XPATH,'(//*[@class="btn filter-results col-12 m-0"])[1]')
 page_drop = (By.XPATH,'//select[@class="form-control custom-select plp-pagecount-select"][1]')
 last_page = (By.XPATH,'//*[@class="pageofNumber"]')
+loader_anim = (By.XPATH,'//*[@class="gl-loader"]')
 
 
 
@@ -46,4 +47,5 @@ class Common_Items_Page:
     def get_last_page_number(self):
         return self.driver.find_element(last_page[0],last_page[1])
 
-
+    def get_loader_anim(self):
+        return self.driver.find_element(loader_anim[0],loader_anim[1])
