@@ -1,4 +1,7 @@
 import test_cases
+from page_object.app_objects.drops_page import  Drops_Page
+from page_object.app_objects.product_page import  Product_Page
+from page_object.app_objects.shop_page import Shop_Page
 from page_object.web_objects.filter_page import Filter_Page
 from page_object.web_objects.front_page import Front_Page
 from page_object.web_objects.common_items_page import Common_Items_Page
@@ -11,6 +14,9 @@ web_navbar_page = None
 web_item_page = None
 web_filter_page = None
 
+app_drops_page = None
+app_shop_page = None
+app_product_page = None
 
 
 class Manage_Pages:
@@ -24,3 +30,10 @@ class Manage_Pages:
         web_item_page = Item_Page(test_cases.conftest.driver)
         web_filter_page = Filter_Page(test_cases.conftest.driver)
 
+    @staticmethod
+    def init_app_pages():
+        global app_drops_page, app_shop_page, app_product_page
+
+        app_drops_page = Drops_Page(test_cases.conftest.driver)
+        app_shop_page = Shop_Page(test_cases.conftest.driver)
+        app_product_page = Product_Page(test_cases.conftest.driver)

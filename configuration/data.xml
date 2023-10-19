@@ -15,9 +15,9 @@
 
     <!--mobile-->
     <MobileDevice>Android</MobileDevice>
-    <UDID>1C091FDF6002YB</UDID>
-    <AppPackage>tapcounter.svimph.com.tapcounter</AppPackage>
-    <AppActivity>.MainActivity</AppActivity>
+    <UDID>R5CNC13EAWR</UDID>
+    <AppPackage>com.adidas.app</AppPackage>
+    <AppActivity>com.adidas.intro.IntroActivity</AppActivity>
     <AppiumServer>http://localhost:4723/wd/hub</AppiumServer>
-    <BundleID></BundleID>
+    <Item_Search>samba og shoes</Item_Search>
 </Enviroment>

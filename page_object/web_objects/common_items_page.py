@@ -24,7 +24,7 @@ class Common_Items_Page:
         return self.driver.find_elements(all_items[0],all_items[1])
 
     def get_all_item_prices(self):
-        raw_prices =  self.driver.find_elements(all_items_prices[0],all_items_prices[1])
+        raw_prices = self.driver.find_elements(all_items_prices[0],all_items_prices[1])
         real_prices = []
         for price in raw_prices:
             real_price = float(price.find_element(By.XPATH,'span/span').get_attribute('content'))

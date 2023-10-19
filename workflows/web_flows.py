@@ -67,6 +67,7 @@ class Web_Flows:
     @staticmethod
     @allure.step('Verify low to high prices')
     def verify_low_to_high_prices():
+        wait(For.ELEMENT_INVISIBLE, loader_anim)
         prices = page.web_common_items_page.get_all_item_prices()
         ver.soft_assert_fisrt_smaller_than_second(prices)
 
@@ -104,8 +105,7 @@ class Web_Flows:
                 wanted_options += 1
             counter += 1
 
-        # filter_result_count = int((page.web_filter_page.get_filter_result_count().text.strip())[1:-1])
-        # ver.verify_equals(filter_result_count,expected_result)
+
 
     @staticmethod
     @allure.step('Get filter total')
@@ -137,3 +137,12 @@ class Web_Flows:
             elem = page.web_front_page.get_strip_element_by_text(strip)
             strip_elems.append(elem)
         ver.soft_displayed(strip_elems)
+
+    @staticmethod
+    @allure.step('verify search item')
+    def search_item(item_name: str):
+        Ui_Actions.update_text(page.web_navbar_page.get_search_field(),item_name)
+        wait(For.ELEMENT_INVISIBLE, loader_anim)
+        Ui_Actions.click(page.web_navbar_page.get_search_drop_menu_first_item())
+        item_title = page.web_item_page.get_item_title().text.lower().strip()
+        assert item_title == item_name.strip().lower()

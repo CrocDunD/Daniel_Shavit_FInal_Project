@@ -36,15 +36,16 @@ def init_web_driver_adidas(request):
     yield
     driver.quit()
 
-# @pytest.fixture(scope='class')
-# def init_mobile_driver(request):
-#     global driver
-#     driver = get_mobile_driver()
-#     driver.implicitly_wait(int(get_data('WaitTime')))
-#     request.cls.driver = driver
-#
-#     yield
-#     driver.quit()
+@pytest.fixture(scope='class')
+def init_mobile_driver_adidas(request):
+    global driver
+    driver = get_mobile_driver()
+    driver.implicitly_wait(int(get_data('WaitTime')))
+    request.cls.driver = driver
+    Manage_Pages.init_app_pages()
+
+    yield
+    driver.quit()
 
 
 
