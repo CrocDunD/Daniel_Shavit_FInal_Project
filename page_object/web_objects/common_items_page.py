@@ -45,7 +45,7 @@ class Common_Items_Page:
         return Select(self.driver.find_element(page_drop[0],page_drop[1]))
 
     def get_last_page_number(self):
-        return self.driver.find_element(last_page[0],last_page[1])
+        return self.driver.find_elements(last_page[0],last_page[1])
 
     def get_loader_anim(self):
         return self.driver.find_element(loader_anim[0],loader_anim[1])

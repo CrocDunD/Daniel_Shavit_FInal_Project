@@ -21,6 +21,11 @@ def read_csv(file_name):
         return data
 
 def csv_to_dictionary(file_name):
+    """
+    this method takes a CSV file and makes a dictionary out of it.
+    the first value of each line is a key and the rest of the values in the same line are that key's value in a form of a list.
+    example: birds, hawk, dodo, flamingo >>> {birds : [hawk, dodo, flamingo]}
+    """
     data = {}
     with open(file_name, newline='') as file:
         reader = csv.reader(file)

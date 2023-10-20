@@ -30,6 +30,7 @@ class Web_Flows:
     @allure.step('Go to original shoes category')
     def open_original_shoes():
         wait(For.ELEMENT_DISPLAYED,men_category_drop)
+        time.sleep(2)
         Ui_Actions.mouse_hover_and_click(page.web_navbar_page.get_men_category(), page.web_navbar_page.get_original_shoes_btn())
 
     @staticmethod
@@ -80,30 +81,35 @@ class Web_Flows:
     @allure.step('Filter items by specifications')
     def filter_items_by_specs(categories_to_filter: str, choices_to_filter: list):
         lower_strip_list(choices_to_filter)
-        all_categories = page.web_filter_page.get_filter_options()
-        filter_num = 0
 
-        for category in all_categories:
-            cat_text = category.find_element(By.XPATH,'div/button/span').text.lower().strip()
-            if cat_text == categories_to_filter.lower().strip():
-                correct_category = category
-                Ui_Actions.click(correct_category)
+        for x in range(len(choices_to_filter)):
+            filter_num = 0
+            all_categories = page.web_filter_page.get_filter_options()
+
+            for category in all_categories:
+                cat_text = category.find_element(By.XPATH, 'div/button/span').text.lower().strip()
+                if cat_text == categories_to_filter.lower().strip():
+                    correct_category = category.find_element(By.XPATH,'div/button')
+                    if 'active' in category.get_attribute('class'):
+                        pass
+                    else:
+                        Ui_Actions.click(correct_category)
+                    filter_num += 1
+                    break
                 filter_num += 1
-                break
-            filter_num += 1
 
-        wanted_options = 0
-        counter = 0
-        while wanted_options != len(choices_to_filter):
+            counter = 0
+            while len(choices_to_filter) > 0:
 
-            all_choices = page.web_filter_page.get_all_filter_options(filter_num)
-            elem = all_choices[counter]
-            choice_text = elem.find_element(By.XPATH,'a/span').text.lower().strip()
-            if choice_text in choices_to_filter:
-                Ui_Actions.click(elem)
-                wait(For.ELEMENT_INVISIBLE, loader_anim)
-                wanted_options += 1
-            counter += 1
+                all_choices = page.web_filter_page.get_all_filter_options(filter_num)
+                elem = all_choices[counter]
+                choice_text = elem.find_element(By.XPATH,'a/span').text.lower().strip()
+                if choice_text in choices_to_filter:
+                    choices_to_filter.remove(choice_text)
+                    Ui_Actions.click(elem)
+                    wait(For.ELEMENT_INVISIBLE, loader_anim)
+                    break
+                counter += 1
 
 
 
@@ -121,14 +127,17 @@ class Web_Flows:
     @allure.step('Count all items in category')
     def count_all_items_in_category():
         wait(For.ELEMENT_INVISIBLE, loader_anim)
-        last_page_number = int(page.web_common_items_page.get_last_page_number().text[3:])
-        page_drop = page.web_common_items_page.get_page_drop()
-        page_drop.select_by_index(last_page_number-1)
-        items_in_all_pages_but_last = 24*(last_page_number-1)
-        wait(For.ELEMENT_INVISIBLE, loader_anim)
-        items_in_last_page = len(page.web_common_items_page.get_all_items())
-        return items_in_all_pages_but_last + items_in_last_page
-
+        if len(page.web_common_items_page.get_last_page_number()) > 0:
+            last_page_number = int(page.web_common_items_page.get_last_page_number()[0].text[3:])
+            page_drop = page.web_common_items_page.get_page_drop()
+            page_drop.select_by_index(last_page_number-1)
+            wait(For.ELEMENT_INVISIBLE, loader_anim)
+            items_in_all_pages_but_last = 24 * (last_page_number - 1)
+            items_in_last_page = len(page.web_common_items_page.get_all_items())
+            return items_in_all_pages_but_last + items_in_last_page
+        else:
+            items_in_last_page = len(page.web_common_items_page.get_all_items())
+            return items_in_last_page
     @staticmethod
     @allure.step('Verify all strips')
     def verify_strips(strip_list):
