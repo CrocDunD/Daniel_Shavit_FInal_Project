@@ -49,7 +49,7 @@ class Ui_Actions:
     def click_mobile_keyboard_key(key):
         if key == 'enter':
             conftest.driver.press_keycode(AndroidKey.ENTER)
-        if key == 'search':
+        elif key == 'search':
             conftest.driver.press_keycode(AndroidKey.SEARCH)
 
 class Key:

@@ -2,6 +2,7 @@ import allure
 import pytest
 import appium.webdriver
 import selenium.webdriver
+from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriver
 from webdriver_manager.chrome import ChromeDriverManager
@@ -38,10 +39,12 @@ def init_web_driver_adidas(request):
 
 @pytest.fixture(scope='class')
 def init_mobile_driver_adidas(request):
-    global driver
+    global driver, action
     driver = get_mobile_driver()
+    action = TouchAction(driver)
     driver.implicitly_wait(int(get_data('WaitTime')))
     request.cls.driver = driver
+    request.cls.action = action
     Manage_Pages.init_app_pages()
 
     yield

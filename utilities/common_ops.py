@@ -35,7 +35,7 @@ def csv_to_dictionary(file_name):
 
 
 def wait(for_element, elem):
-    wait_time = 5
+    wait_time = 10
     if for_element == 'element exists':
         WebDriverWait(conftest.driver, wait_time).until(EC.presence_of_element_located((elem[0], elem[1])))
     elif for_element == 'element displayed':
