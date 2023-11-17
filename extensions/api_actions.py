@@ -22,6 +22,8 @@ class Api_Actions:
             extracted_values = response_json[(nodes[0])][(nodes[1])]
         elif len(nodes) == 3:
             extracted_values = response_json[(nodes[0])][(nodes[1])][(nodes[2])]
+        elif len(nodes) == 4:
+            extracted_values = response_json[(nodes[0])][(nodes[1])][(nodes[2])][(nodes[3])]
         return extracted_values
 
     @staticmethod

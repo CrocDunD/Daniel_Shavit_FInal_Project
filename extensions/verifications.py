@@ -53,3 +53,6 @@ class Verifications:
     @allure.step('Verify first number bigger')
     def verify_bigger_number(actual_result, expected_result):
         assert actual_result >= expected_result, "Actual result is smaller than expected result"
+
+
+
