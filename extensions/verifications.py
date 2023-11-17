@@ -7,6 +7,8 @@ class Verifications:
     @staticmethod
     @allure.step('Verify equal values')
     def verify_equals(actual, expected):
+        print('Actual: ', actual)
+        print('Expected: ', expected)
         assert actual == expected, 'Actual result did not match expected'
 
     @staticmethod
@@ -46,3 +48,8 @@ class Verifications:
     @allure.step('Verify number of elements')
     def verify_number_of_elements(list, expected_result):
         assert len(list) == expected_result, 'Number of elements in list does not match the expected result. Expected:'+ str(expected_result) +'actual result:' + str(len(list))
+
+    @staticmethod
+    @allure.step('Verify first number bigger')
+    def verify_bigger_number(actual_result, expected_result):
+        assert actual_result >= expected_result, "Actual result is smaller than expected result"

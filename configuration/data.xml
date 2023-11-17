@@ -7,11 +7,14 @@
     <!--Web & API-->
     <Browser>chrome</Browser>
     <Url>https://www.adidas.co.il/en</Url>
+    <Api_Url>http://localhost:3000/</Api_Url>
     <UserName>admin</UserName>
     <Password>admin1</Password>
     <Sub_Category_Count_CSV>C:/Users/daniels/PycharmProjects/Final_Automation Project_Daniel_Shavit/ddt/sub_category_count.csv</Sub_Category_Count_CSV>
     <Filter_Specs_CSV>C:/Users/daniels/PycharmProjects/Final_Automation Project_Daniel_Shavit/ddt/filter_specs.csv</Filter_Specs_CSV>
     <Main_Page_Strips>Who are you shopping for?,BEST OF ADIDAS ORIGINALS,NEW IN RUNNING,WHAT'S HOT</Main_Page_Strips>
+    <completed_percentage_upper_bound>0.5</completed_percentage_upper_bound>
+    <todo_id_to_update>3</todo_id_to_update>
 
     <!--mobile-->
     <MobileDevice>Android</MobileDevice>
@@ -20,4 +23,6 @@
     <AppActivity>com.adidas.intro.IntroActivity</AppActivity>
     <AppiumServer>http://localhost:4723/wd/hub</AppiumServer>
     <Item_Search>samba og shoes</Item_Search>
+    <AppUserName>daniels@inmanage.net</AppUserName>
+    <AppPassWord>134679852@PoW</AppPassWord>
 </Enviroment>

@@ -46,6 +46,7 @@ def init_mobile_driver_adidas(request):
     request.cls.driver = driver
     request.cls.action = action
     Manage_Pages.init_app_pages()
+    driver.implicitly_wait(10)
 
     yield
     driver.quit()

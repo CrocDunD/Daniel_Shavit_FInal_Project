@@ -13,7 +13,7 @@ from extensions.verifications import Verifications as ver
 class Test_App_Adidas:
 
     #def setup_method(self):
-    #    flow.go_to_navbar()
+    #    flow.go_to_navbar(2)
 
     allure.title('Search Item')
     allure.step('Test search of an item and and verifying the title is correct')
@@ -35,11 +35,31 @@ class Test_App_Adidas:
         items_total_after = int(flow.get_item_bag_total())
         ver.verify_equals(items_total_before + 1, items_total_after)
 
+    allure.title('Login With Email')
+    allure.step('Test Logging in to a user with an email')
+
+    def test_login_email(self):
+        flow.click_profile_btn()
+        profile_title = flow.login_with_email_flow('daniels@inmanage.net', get_data('AppPassWord'))
+        ver.is_displayed(profile_title)
 
 
+    allure.title('Change Order of Page Banners')
+    allure.step('Test changing the order of the the "Recommended for You" section')
+    def test_change_banner_order(self):
+        flow.go_to_navbar(1)
+        time.sleep(3)
+        flow.swipe()
 
 
-
-    #change order of front page banners
-
-    #add item to wishlist
+    allure.title('Add Item To Wishlist')
+    allure.step('Test adding an item to the wishlist and verifying that it has in fact been added')
+    def test_add_to_wishlist(self):
+        flow.go_to_mens_category()
+        flow.go_to_first_category()
+        flow.go_to_first_sub_category()
+        product_name = flow.wishlist_item().lower()
+        flow.go_to_navbar(3)
+        name_in_wishlist = flow.get_first_wishlist_item_name().lower()
+        flow.remove_wishlist_item()
+        ver.verify_equals(product_name, name_in_wishlist)
