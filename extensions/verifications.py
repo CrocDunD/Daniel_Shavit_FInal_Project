@@ -36,12 +36,14 @@ class Verifications:
 
     @staticmethod
     @allure.step('Verify that a list is going in a rising pattern')
-    def soft_assert_fisrt_smaller_than_second(elems):
+    def soft_assert_first_smaller_than_second(elems):
         first = elems[0]
+
         for elem in elems:
             second = elem
             soft_assert(first <= second)
             first = elem
+
         verify_expectations()
 
     @staticmethod

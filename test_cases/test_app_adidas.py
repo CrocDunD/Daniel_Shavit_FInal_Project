@@ -35,9 +35,9 @@ class Test_App_Adidas:
         items_total_after = int(flow.get_item_bag_total())
         ver.verify_equals(items_total_before + 1, items_total_after)
 
+
     allure.title('Login With Email')
     allure.step('Test Logging in to a user with an email')
-
     def test_login_email(self):
         flow.click_profile_btn()
         profile_title = flow.login_with_email_flow('daniels@inmanage.net', get_data('AppPassWord'))

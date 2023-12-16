@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 
 from page_object.web_objects.common_items_page import last_page, all_items, loader_anim
 from page_object.web_objects.front_page import X_btn_first_popup
-from page_object.web_objects.navbar_page import men_category_drop
+from page_object.web_objects.navbar_page import men_category_drop, main_category
 from page_object.web_objects.item_page import add_to_cart_btn
 from utilities.common_ops import read_csv, get_data, For, lower_strip_list
 from utilities import manage_pages as page
@@ -25,6 +25,7 @@ class Web_Flows:
                 Ui_Actions.click(page.web_front_page.get_X_btn_first_popup())
         except:
             pass
+        page.web_front_page.get_close_join_club().click()
 
     @staticmethod
     @allure.step('Go to original shoes category')
@@ -70,7 +71,7 @@ class Web_Flows:
     def verify_low_to_high_prices():
         wait(For.ELEMENT_INVISIBLE, loader_anim)
         prices = page.web_common_items_page.get_all_item_prices()
-        ver.soft_assert_fisrt_smaller_than_second(prices)
+        ver.soft_assert_first_smaller_than_second(prices)
 
     @staticmethod
     @allure.step('Open filter menu')
