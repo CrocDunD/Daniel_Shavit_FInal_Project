@@ -29,8 +29,10 @@ class Test_Web_Adidas:
     #     flow.open_first_item()
     #     flow.add_item_to_cart()
 
-
-    #This test makes use of ddt. the test should work no matter the order of the categories in the CSV(sub_category_count.csv)
+    """
+    This test makes use of ddt.
+    the test should work no matter the order of the categories in the CSV(sub_category_count.csv)
+    """
     @allure.title('Test count all sub categories')
     @allure.description('Count all the sub categories of all the main categories and verify that the number is correct')
     @pytest.mark.parametrize('category,expected_result',read_csv(get_data('Sub_Category_Count_CSV')))
@@ -47,8 +49,12 @@ class Test_Web_Adidas:
 
 
     """
-    This test receives a list of categories and 
+    This test receives a list of categories and choices and filters a products page by those specifications
+    The list is in filter_specs.csv in the ddt folder
+    The first word of every line is the category and the other words are the choices to be made in that same category.
+    Example: Shoes, sneakers, sandals
     """
+
     @allure.title('Test filter items')
     @allure.description('Filter items by specifications and verify that the number of items is correct')
     def test_filter_by_specs(self):
@@ -69,7 +75,12 @@ class Test_Web_Adidas:
         strip_titles = strip_titles.split(',')
         flow.verify_strips(strip_titles)
 
+
+    """
+    This test searches for an item by product code and compares the name in the product page to an expected result
+    WebItemID and WebItemName can be edited in the data.xml file
+    Product code can be found in the URL in the product page on the website"""
     @allure.title('Test search items')
     @allure.description('Search for specific items using ddt')
     def test_search_item(self):
-        flow.search_item('SAMBA OG SHOES')
+        flow.search_item(get_data("WebItemID"))

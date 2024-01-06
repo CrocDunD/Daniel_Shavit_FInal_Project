@@ -12,11 +12,13 @@
     <Password>admin1</Password>
     <Sub_Category_Count_CSV>C:/Users/daniels/PycharmProjects/Final_Automation Project_Daniel_Shavit/ddt/sub_category_count.csv</Sub_Category_Count_CSV>
     <Filter_Specs_CSV>C:/Users/daniels/PycharmProjects/Final_Automation Project_Daniel_Shavit/ddt/filter_specs.csv</Filter_Specs_CSV>
-    <Main_Page_Strips>END OF SEASON SALE,IVY PARK,WHAT'S HOT</Main_Page_Strips>
+    <Main_Page_Strips>Who are you shopping for?,END OF SEASON SALE,New in Adidas,WHAT'S HOT</Main_Page_Strips>
     <completed_percentage_upper_bound>0.5</completed_percentage_upper_bound>
     <todo_id_to_update>11</todo_id_to_update>
     <Album_Name>quidem molestiae enim</Album_Name>
     <User_Id>1</User_Id>
+    <WebItemID>HQ2055</WebItemID>
+    <WebItemName>adilette essential slides</WebItemName>
 
     <!--mobile-->
     <MobileDevice>Android</MobileDevice>
@@ -24,8 +26,8 @@
     <AppPackage>com.adidas.app</AppPackage>
     <AppActivity>com.adidas.intro.IntroActivity</AppActivity>
     <AppiumServer>http://localhost:4723/wd/hub</AppiumServer>
-    <ItemID>HQ2055</ItemID>
-    <ItemName>adilette essential slides</ItemName>
+    <AppItemID>HQ2055</AppItemID>
+    <AppItemName>adilette essential slides</AppItemName>
     <AppUserName>daniels@inmanage.net</AppUserName>
     <AppPassWord>134679852@PoW</AppPassWord>
     <Category>NEW ARRIVALS</Category>

@@ -16,21 +16,21 @@ class Test_App_Adidas:
         flow.go_to_front_page()
 
     #This test searches for an item by product code and compares the name in the product page to an expected result
-    #ItemID and ItemName can be edited in the data.xml file
+    #AppItemID and AppItemName can be edited in the data.xml file
     #Product code can be found in the specifications in the product page on the app
     allure.title('Search Item')
     allure.description('Test search of an item and and verifying the title is correct')
     def test_search_for_item(self):
-        flow.search_for_something(get_data('ItemID'))
+        flow.search_for_something(get_data('AppItemID'))
         title = flow.get_item_name()
-        ver.verify_equals(title.strip().lower(),get_data("ItemName").strip().lower())
+        ver.verify_equals(title.strip().lower(),get_data("AppItemName").strip().lower())
 
 
     allure.title('Add Item To Basket')
     allure.description('Test adding an item to the basket and verifying that the basket total is increased')
     def test_add_item_to_basket(self):
         items_total_before = int(flow.get_item_bag_total())
-        item_name = get_data('ItemID').strip().lower()
+        item_name = get_data('AppItemID').strip().lower()
         flow.search_for_something(item_name)
         flow.add_to_bag_and_go_to_bag()
         items_total_after = int(flow.get_item_bag_total())

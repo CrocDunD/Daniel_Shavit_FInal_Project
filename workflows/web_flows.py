@@ -152,9 +152,9 @@ class Web_Flows:
 
     @staticmethod
     @allure.step('verify search item')
-    def search_item(item_name: str):
-        Ui_Actions.update_text(page.web_navbar_page.get_search_field(),item_name)
+    def search_item(item_id: str):
+        Ui_Actions.update_text(page.web_navbar_page.get_search_field(), item_id)
         wait(For.ELEMENT_INVISIBLE, loader_anim)
         Ui_Actions.click(page.web_navbar_page.get_search_drop_menu_first_item())
         item_title = page.web_item_page.get_item_title().text.lower().strip()
-        assert item_title == item_name.strip().lower()
+        assert item_title == get_data("WebItemName").strip().lower()
