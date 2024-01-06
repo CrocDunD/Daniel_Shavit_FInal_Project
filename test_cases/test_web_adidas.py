@@ -18,7 +18,7 @@ class Test_Web_Adidas:
 
     """"
     this test is a BUST! for some unknown reason when operating the browser with the python code the website does not
-    allow an item to be added to the basket. perhaps this was done a protective mesure by Adidas.
+    allow an item to be added to the basket. perhaps this was done a protective measure by Adidas.
     """
 
     # @allure.title('Add item to bag')

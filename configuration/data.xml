@@ -20,11 +20,14 @@
 
     <!--mobile-->
     <MobileDevice>Android</MobileDevice>
-    <UDID>R5CNC13EAWR</UDID>
+    <UDID>1C091FDF6002YB</UDID>
     <AppPackage>com.adidas.app</AppPackage>
     <AppActivity>com.adidas.intro.IntroActivity</AppActivity>
     <AppiumServer>http://localhost:4723/wd/hub</AppiumServer>
-    <Item_Search>samba og shoes</Item_Search>
+    <ItemID>HQ2055</ItemID>
+    <ItemName>adilette essential slides</ItemName>
     <AppUserName>daniels@inmanage.net</AppUserName>
     <AppPassWord>134679852@PoW</AppPassWord>
+    <Category>NEW ARRIVALS</Category>
+    <SubCategory>ORIGINALS</SubCategory>
 </Enviroment>

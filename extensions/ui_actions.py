@@ -51,6 +51,8 @@ class Ui_Actions:
             conftest.driver.press_keycode(AndroidKey.ENTER)
         elif key == 'search':
             conftest.driver.press_keycode(AndroidKey.SEARCH)
+        elif key == 'back':
+            conftest.driver.press_keycode(AndroidKey.BACK)
 
     @staticmethod
     def swipe():
@@ -59,5 +61,6 @@ class Ui_Actions:
 class Key:
     ENTER = 'enter'
     SEARCH = 'search'
+    BACK = 'back'
 
 

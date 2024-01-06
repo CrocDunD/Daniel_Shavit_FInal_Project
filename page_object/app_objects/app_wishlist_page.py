@@ -1,8 +1,9 @@
 from selenium.webdriver.common.by import By
 
-first_item_title = (By.XPATH,"//*[@id='wishListItemName'][1]")
-more_options = (By.XPATH,"//*[@id='moreOptionImage'][1]")
-remove_from_wishlist = (By.XPATH,"//*[@text='Remove from Wishlist']")
+first_item_title = (By.XPATH,"(//*[@id ='product_name'])[1]")
+more_options = (By.XPATH,"//*[@id='more_options'][1]")
+remove_from_wishlist = (By.XPATH,"//*[@id='REMOVE_row']")
+
 
 
 class App_Wishlist_Page:
@@ -17,3 +18,5 @@ class App_Wishlist_Page:
 
     def get_remove_from_wishlist(self):
         return self.driver.find_element(remove_from_wishlist[0],remove_from_wishlist[1])
+
+

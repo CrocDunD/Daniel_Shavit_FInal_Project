@@ -1,11 +1,12 @@
 import test_cases
+from page_object.app_objects.app_basket_page import App_Basket_Page
 from page_object.app_objects.app_login_page import App_Login_Page
 from page_object.app_objects.app_navbar_page import App_Navbar_Page
 from page_object.app_objects.app_profile_page import App_Profile_Page
 from page_object.app_objects.app_wishlist_page import App_Wishlist_Page
-from page_object.app_objects.drops_page import  Drops_Page
-from page_object.app_objects.product_page import  Product_Page
-from page_object.app_objects.shop_page import Shop_Page
+from page_object.app_objects.app_drops_page import  Drops_Page
+from page_object.app_objects.app_product_page import  Product_Page
+from page_object.app_objects.app_shop_page import Shop_Page
 from page_object.web_objects.filter_page import Filter_Page
 from page_object.web_objects.front_page import Front_Page
 from page_object.web_objects.common_items_page import Common_Items_Page
@@ -25,6 +26,7 @@ app_navbar_page = None
 app_login_page = None
 app_profile_page = None
 app_wishlist_page = None
+app_basket_page = None
 
 class Manage_Pages:
     @staticmethod
@@ -39,7 +41,7 @@ class Manage_Pages:
 
     @staticmethod
     def init_app_pages():
-        global app_drops_page, app_shop_page, app_product_page, app_navbar_page, app_login_page, app_profile_page, app_wishlist_page
+        global app_drops_page, app_shop_page, app_product_page, app_navbar_page, app_login_page, app_profile_page, app_wishlist_page, app_basket_page
 
         app_drops_page = Drops_Page(test_cases.conftest.driver)
         app_shop_page = Shop_Page(test_cases.conftest.driver)
@@ -48,3 +50,4 @@ class Manage_Pages:
         app_login_page = App_Login_Page(test_cases.conftest.driver)
         app_profile_page = App_Profile_Page(test_cases.conftest.driver)
         app_wishlist_page = App_Wishlist_Page(test_cases.conftest.driver)
+        app_basket_page = App_Basket_Page(test_cases.conftest.driver)

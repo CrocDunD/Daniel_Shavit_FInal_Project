@@ -23,9 +23,11 @@ class Web_Flows:
             if page.web_front_page.get_X_btn_first_popup().is_displayed():
                 wait(For.ELEMENT_DISPLAYED,X_btn_first_popup)
                 Ui_Actions.click(page.web_front_page.get_X_btn_first_popup())
+            if page.web_front_page.get_close_join_club().is_displayed():
+                Ui_Actions.click(page.web_front_page.get_close_join_club())
         except:
             pass
-        page.web_front_page.get_close_join_club().click()
+
 
     @staticmethod
     @allure.step('Go to original shoes category')
